@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.Count Characters You are given a string S, and your task is to return an array B(having a size of 2), where B[0]contains the count of character A (uppercase) in string S and B[1]contains the count of character D (uppercase) in string S.
+    Note: You have to complete countCharacters function. No need to take any input.
+      <pre>
+        const countCharacters = (S) => 
+{
+  var B = [2];
+  let countA = 0;
+  let countD = 0;
+  let i;
+  for (i = 0; i < S.length; i++) {
+    if (S[i] === "A") {
+      countA += 1;
+    } else if (S[i] === "D") {
+      countD += 1;
+    }
+  }
+  B[0] = countA;
+  B[1] = countD;
+  return B;
+};
+ 
+      </pre>
+ 2.Count the Heads
+ <pre>
+    
+var Count_Occ = (s) => 
+{
+   let Arr = s.split("").sort();
+    var p;
+    let map1 = new Map();
+    for(let i =0; i<Arr.length;i++)
+    {
+      p=0;
+     Arr.reduce((acc,val)=>
+      {
+        if(val == Arr[i])
+        {
+          p=acc+1;
+        }
+        return p;
+      }, 0);
+      map1.set(`${Arr[i]}` , p);
+    }
+    let z = [];
+    map1.forEach((value,key)=>
+    {
+    if(value>1)
+    {
+      z.push(key + "" + value);
+    }
+    });
+        return (z.join("")); 
+};
+ </pre>
+ 3.Count the Vowels
+ <pre>
+    var Count_Vowels= (S) => 
+{
+   const count =S.match(/[aeiou]/gi).length;
+   return count;
+};
+ 
+
+ </pre>
+ 4.Concatenate the Strings
+ <pre>
+    var Concatenate_Strings = (S1, S2) => 
+{
+   var he=S1.concat(S2);
+   return he;
+};
+ 
+ </pre>
+ 5.Find Length
+ <pre>
+    const findLength = (S) => 
+{
+     var d=S.length;
+    return d;
+};
+ </pre>
+ 6.Find the Winner
+ <pre>
+     
+var Game_Winner = (S) => 
+{
+  let countA=S.match(/[A]/gmi).length;
+  let countD=S.match(/[D]/gmi).length;
+  if(countA >countD)
+  {
+    return "Aditya";
+  }
+  else if(countA <countD){
+    return 'Danish';
+  }
+  else{
+    return 'Draw';
+  }
+}
+
+ </pre>
+ 7.Join Strings
+ <pre>
+    const joinStrings = (S, P) => 
+{
+   var ME=S.concat(P)
+   return ME
+};
+ </pre>
+ 8.Plaindrome Check
+ <pre>
+    var Palin_Check = (str) =>
+{
+	 let a = 0;
+	 let b = str.length - 1;
+	
+	 while(a < b)
+	  {
+	   if(str[a] === str[b])
+	     {
+	       a++;
+	       b--;
+	     }
+	     else
+	       {
+	         return "False";
+	       }
+	  }
+	  return "True";
+}
+
+ </pre>
+ 9.Reverse the String
+ <pre>
+    
+var Reverse_String = (str) => 
+{
+   var splitString = str.split("");
+   var reverseArray = splitString.reverse();
+   var joinArray = reverseArray.join("");
+   return joinArray;
+};
+ 
+
+ </pre>
+ 10.Match the Strings
+ <pre>
+    
+var String_Match = (S1,S2) => 
+{
+  if(S1 === S2){
+    return "YES";
+  }    
+  else{
+    return "NO"
+  }
+};
+ 
+
+ </pre>
+ 11.String Replace
+ <pre>
+    
+var Replace = (S, pattern , text) => 
+{
+   var tt= S.replace(pattern,text);
+   return tt;
+};
+ 
+
+ </pre>
+ 12.Split the String
+ <pre>
+    
+var Split_the_string = (S) => 
+{
+  var dd= S.split(" ");
+  return dd;
+        
+};
+ 
+
+ </pre>
+ 13.Count the Vowels and Consonants
+ <pre>
+    
+var Count_Vowels= (S) => 
+{
+  const vowel = S.match(/[aeiou]/gi).length;
+
+    return vowel;
+ 
+};
+var Count_Consonants= (S) => 
+{
+   const consonant = S.match(/[b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v ,w, x, y, z,]/gi).length;
+
+    return consonant;  
+};
+ 
+
+ </pre>
+</body>
+</html>
